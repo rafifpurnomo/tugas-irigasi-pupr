@@ -1,0 +1,45 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "db:sync": "node src/scripts/syncDatabase.js",
+    "db:drop": "node src/scripts/dropTables.js",
+    "test:import": "node src/test/testImport.js",
+    "test:normalizer": "node src/test/testNormalizer.js",
+    "test:coordinates": "node src/test/testCoordinates.js",
+    "test:geometry": "node src/test/testGeometry.js",
+    "test:canal": "node src/test/testCanalCleaning.js",
+    "test:plot": "node src/test/testPlotCleaning.js",
+    "test:network": "node src/test/testCanalNetwork.js",
+    "test:reports": "node src/test/testReportCleaning.js",
+    "test:assets": "node src/test/testAssetCleaning.js",
+    "test:initial-import": "node src/test/testInitialImport.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@turf/boolean-valid": "^7.4.0",
+    "@turf/turf": "^7.4.0",
+    "@turf/unkink-polygon": "^7.4.0",
+    "cors": "^2.8.6",
+    "csv-parser": "^3.2.1",
+    "dotenv": "^18.0.10",
+    "express": "^5.3.0",
+    "mysql2": "^3.24.6",
+    "proj4": "^2.23.0",
+    "sequelize": "^6.37.8",
+    "uuid": "^14.0.3",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "jest": "^30.5.2",
+    "nodemon": "^3.1.14",
+    "supertest": "^7.3.2"
+  }
+}
